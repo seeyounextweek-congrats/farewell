@@ -34,7 +34,7 @@ import {
 document.getElementById("page-title").textContent = `給${COLLEAGUE_NAME}的留言牆`;
 document.getElementById("hero-title").textContent = `給${COLLEAGUE_NAME}的留言牆`;
 document.getElementById("hero-subtitle").textContent =
-  `這段時間辛苦你了。這裡集滿了大家想對${COLLEAGUE_NAME}說的話——謝謝、祝福，還有滿滿的不捨，都在下一段旅程開始前，好好收下。`;
+  `這段時間辛苦你了。這裡集滿了大家想對${COLLEAGUE_NAME}說的話——謝謝、祝福，還有不捨，在下一段旅程開始前，好好收下。`;
 document.getElementById("wall-heading").textContent = `大家想對${COLLEAGUE_NAME}說的話 💌`;
 document.getElementById("form-heading").textContent = `留下你想對${COLLEAGUE_NAME}說的話 ✍️`;
 
