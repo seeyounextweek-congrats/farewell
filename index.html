@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="page-title">留言牆</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@500;700&family=Noto+Sans+TC:wght@400;500;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="hero">
+    <div class="hero__deco" aria-hidden="true">
+      <span class="deco" style="left:60%; bottom:8%;">🎈</span>
+      <span class="deco" style="right:10%; top:10%;">✨</span>
+      <span class="deco" style="right:26%; top:38%;">🎉</span>
+      <span class="deco" style="right:8%; bottom:20%;">🚀</span>
+      <span class="deco" style="left:48%; top:6%;">💛</span>
+    </div>
+
+    <div class="hero__photo">
+      <img
+        id="colleague-photo"
+        src="photo.jpg"
+        alt=""
+        onerror="this.style.display='none'; document.getElementById('photo-fallback').style.display='flex';"
+      />
+      <div class="hero__photo-fallback" id="photo-fallback" aria-hidden="true">🧑‍💻</div>
+      <span class="hero__photo-badge">🌟</span>
+    </div>
+
+    <p class="hero__eyebrow">感謝相伴，祝福啟程</p>
+    <h1 class="hero__title" id="hero-title">同事的留言牆</h1>
+    <p class="hero__subtitle" id="hero-subtitle">
+      這段時間辛苦你了。這裡集滿了大家想對你說的話——謝謝、祝福，還有滿滿的不捨，都在下一段旅程開始前，好好收下。
+    </p>
+
+    <svg class="hero__wave" viewBox="0 0 1440 80" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M0,32 C240,80 480,0 720,24 C960,48 1200,88 1440,40 L1440,80 L0,80 Z" />
+    </svg>
+  </header>
+
+  <main class="page">
+
+    <section class="banner" aria-labelledby="banner-caption">
+      <div class="banner__frame">
+        <img
+          id="team-photo"
+          class="banner__img"
+          src="team.jpg"
+          alt=""
+          onerror="this.style.display='none'; document.getElementById('team-photo-fallback').style.display='flex';"
+        />
+        <div class="banner__fallback" id="team-photo-fallback" aria-hidden="true">
+          <span>📷</span>
+          <p>把 team.jpg 放進資料夾，這裡就會換成全體合照</p>
+        </div>
+      </div>
+      <p class="banner__caption" id="banner-caption">那些一起打拚的日子 📅</p>
+    </section>
+
+    <section class="wall" aria-labelledby="wall-heading">
+      <div class="wall__deco" aria-hidden="true">
+        <span class="deco" style="left:-64px; top:6%;">🎊</span>
+        <span class="deco" style="right:-64px; top:10%;">🥳</span>
+        <span class="deco" style="left:-56px; bottom:14%;">💫</span>
+        <span class="deco" style="right:-56px; bottom:6%;">🌟</span>
+      </div>
+      <h2 id="wall-heading" class="wall__title">大家想對你說的話 💌</h2>
+      <p id="wall-status" class="wall__status">正在載入留言…</p>
+      <div id="messages" class="wall__grid"></div>
+    </section>
+
+    <section class="note-form" aria-labelledby="form-heading">
+      <h2 id="form-heading" class="note-form__title">留下你想說的話 ✍️</h2>
+
+      <form id="message-form" novalidate>
+        <div class="field">
+          <label for="name">你的名字</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            maxlength="20"
+            placeholder="例如：行銷部 阿凱"
+            required
+          />
+        </div>
+
+        <div class="field">
+          <label for="message">留言內容</label>
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            maxlength="300"
+            placeholder="想說什麼都可以，感謝、祝福、回憶都行"
+            required
+          ></textarea>
+        </div>
+
+        <p id="form-error" class="form-error" role="alert" hidden></p>
+
+        <button type="submit" id="submit-btn">送出祝福 🎁</button>
+      </form>
+    </section>
+
+    <section class="closing-photo" aria-labelledby="closing-photo-caption">
+      <div class="closing-photo__frame">
+        <img
+          id="closing-photo"
+          class="closing-photo__img"
+          src="photo2.jpg"
+          alt=""
+          onerror="this.style.display='none'; document.getElementById('closing-photo-fallback').style.display='flex';"
+        />
+        <div class="closing-photo__fallback" id="closing-photo-fallback" aria-hidden="true">🚀</div>
+      </div>
+      <p class="closing-photo__caption" id="closing-photo-caption">下一站，精彩無限 🚀</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>🌱 響應環保、少浪費一張卡片紙——其實是大家都太忙啦，所以把感謝跟不捨都搬到網路上了。謝謝你花時間留下這段話，地球和 Matt 都感受到了 👋</p>
+  </footer>
+
+  <script type="module" src="script.js"></script>
+</body>
+</html>
