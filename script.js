@@ -37,6 +37,16 @@ document.getElementById("hero-subtitle").textContent =
   `這段時間辛苦你了。這裡集滿了大家想對${COLLEAGUE_NAME}說的話——謝謝、祝福，還有不捨，在下一段旅程開始前，好好收下。`;
 document.getElementById("wall-heading").textContent = `大家想對${COLLEAGUE_NAME}說的話 💌`;
 document.getElementById("form-heading").textContent = `留下你想對${COLLEAGUE_NAME}說的話 ✍️`;
+// 留言時間結束，把留言表單換成感謝提示，不再讓人送出新留言
+const noteFormSection = document.querySelector(".note-form");
+if (noteFormSection) {
+  noteFormSection.innerHTML = `
+    <h2 class="note-form__title">留言時間已經結束 🙏</h2>
+    <p class="note-form__closed-text">
+      謝謝大家這段時間留下的祝福與回憶，留言蒐集已經停止了。
+    </p>
+  `;
+}
 
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
